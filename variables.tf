@@ -18,10 +18,9 @@ variable "name" {
   description = "Name"
 }
 
-variable "security_groups" {
-  type        = "list"
-  default     = []
-  description = "AWS security group ids"
+variable "security_group" {
+  description = "AWS security group id"
+  default = ""
 }
 
 variable "vpc_id" {
@@ -34,7 +33,10 @@ variable "subnets" {
   description = "AWS subnet ids"
   default     = []
 }
-
+variable "cidr_blocks" {
+  description = "CIDR blocks to allow accress from"
+  default = ""
+}
 variable "maintenance_window" {
   default     = "wed:03:00-wed:04:00"
   description = "Maintenance window"
