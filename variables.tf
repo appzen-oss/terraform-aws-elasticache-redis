@@ -35,7 +35,8 @@ variable "subnets" {
 }
 variable "cidr_blocks" {
   description = "CIDR blocks to allow accress from"
-  default = ""
+  type = "list"
+  default = []
 }
 variable "maintenance_window" {
   default     = "wed:03:00-wed:04:00"
